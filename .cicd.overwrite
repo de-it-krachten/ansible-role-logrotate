@@ -1,0 +1,24 @@
+---
+
+# Generic
+generic:
+  role: ansible-role-logrotate
+  role_short: logrotate
+  role_description: |
+    Installs & configures logrotate (bundled with all Linux distros)
+  collections: []
+
+# Dependencies
+dependencies:
+  roles:
+    - deitkrachten.cron
+  collections: []
+
+# Molecule
+molecule:
+  requirements:
+    roles_extra:
+      - deitkrachten.cron
+  converge:
+    roles:
+      - deitkrachten.cron
