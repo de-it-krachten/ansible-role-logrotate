@@ -58,7 +58,6 @@ logrotate_packages:
   hosts: all
   become: "yes"
   roles:
-    - deitkrachten.showinfo
     - deitkrachten.cron
   tasks:
     - name: Include role 'logrotate'
