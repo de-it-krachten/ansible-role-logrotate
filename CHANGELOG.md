@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-logrotate/compare/v1.2.0...v1.3.0) (2024-12-29)
+
+
+### Features
+
+* Update supported platforms & CI ([08c9c8e](https://github.com/de-it-krachten/ansible-role-logrotate/commit/08c9c8e6f9d3a55a99c4d19c5dd6347d0f09b8db))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-logrotate/compare/v1.1.0...v1.2.0) (2024-06-03)
 
 
