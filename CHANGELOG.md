@@ -1,3 +1,14 @@
+# [1.4.0](https://github.com/de-it-krachten/ansible-role-logrotate/compare/v1.3.0...v1.4.0) (2025-08-07)
+
+
+### Features
+
+* Add support for AlmaLinux 10 ([8f041c5](https://github.com/de-it-krachten/ansible-role-logrotate/commit/8f041c5e8c81d58636b2fa901608fce41f4eb322))
+* Add support for Debian 13 (Trixie) ([c388b89](https://github.com/de-it-krachten/ansible-role-logrotate/commit/c388b895849ff7b563dc0fa3a72d1ac2ca1c7264))
+* Add support for OracleLinux 10 ([f377659](https://github.com/de-it-krachten/ansible-role-logrotate/commit/f377659314ec4de625a711047e47ca620197dcc7))
+* Add support for Red Hat Enterprise Linux 10 ([2ea1771](https://github.com/de-it-krachten/ansible-role-logrotate/commit/2ea17718a4ba3f1cd2a3b80cde0ecd80d310a7ff))
+* Add support for RockyLinux 10 ([7e98dfa](https://github.com/de-it-krachten/ansible-role-logrotate/commit/7e98dfa65252857feda9b754d585e9492dc6533a))
+
 # [1.3.0](https://github.com/de-it-krachten/ansible-role-logrotate/compare/v1.2.0...v1.3.0) (2024-12-29)
 
 
