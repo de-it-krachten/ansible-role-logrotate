@@ -1,3 +1,13 @@
+# [1.5.0](https://github.com/de-it-krachten/ansible-role-logrotate/compare/v1.4.0...v1.5.0) (2026-03-15)
+
+
+### Features
+
+* Added support for Fedora 43 ([ece42d6](https://github.com/de-it-krachten/ansible-role-logrotate/commit/ece42d6e9593dd8808e1523bc8503cc91b15131d))
+* Drop support for Fedora 41 ([0ad5233](https://github.com/de-it-krachten/ansible-role-logrotate/commit/0ad52332c2e1ce183dccab956c80daef516a92c3))
+* Drop support for openSUSE Leap 15 ([105e365](https://github.com/de-it-krachten/ansible-role-logrotate/commit/105e36522562f3607cd6240495ad99db88c2abeb))
+* Drop support for SUSE Linux Enterprise 15 ([68d274b](https://github.com/de-it-krachten/ansible-role-logrotate/commit/68d274b8ab5b0d35dc2e448896765f4ae798d529))
+
 # [1.4.0](https://github.com/de-it-krachten/ansible-role-logrotate/compare/v1.3.0...v1.4.0) (2025-08-07)
 
 
