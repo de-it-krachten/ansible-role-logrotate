@@ -8,6 +8,12 @@ generic:
     Installs & configures logrotate (bundled with all Linux distros)
   collections: []
 
+# Supported platforms
+platforms:
+  ubuntu2004:
+    supported: true
+    ci: true
+
 # Dependencies
 dependencies:
   roles:
