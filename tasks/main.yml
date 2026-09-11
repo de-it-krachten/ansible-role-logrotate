@@ -4,3 +4,62 @@
   ansible.builtin.package:
     name: "{{ logrotate_packages }}"
     state: present
+
+- name: Set schedule via systemd
+  when: logrotate_scheduler == 'systemd'
+  block:
+
+    - name: Remove cron scheduler
+      ansible.builtin.cron:
+        name: logrotate-daily
+        state: absent
+        cron_file: logrotate-daily
+
+    - name: Ensure logrotate timer drop-in directory exists
+      ansible.builtin.file:
+        path: /etc/systemd/system/logrotate.timer.d
+        state: directory
+        owner: root
+        group: root
+        mode: "0755"
+
+    - name: SetSet schedule via systemd timer drop-in
+      ansible.builtin.copy:
+        dest: /etc/systemd/system/logrotate.timer.d/override.conf
+        content: |
+          [Timer]
+          OnCalendar=
+          OnCalendar=*-*-* {{ logrotate_schedule_time }}
+          AccuracySec=1m
+        owner: root
+        group: root
+        mode: "0644"
+      notify: Restart logrotate timer
+
+    - name: Enable systemd logrotate timer
+      ansible.builtin.systemd:
+        name: logrotate.timer
+        state: started
+        enabled: true
+        daemon_reload: true
+
+
+- name: Set schedule via cron
+  when: logrotate_scheduler == 'cron'
+  block:
+
+    - name: Enable logrotate via cron
+      ansible.builtin.cron:
+        name: logrotate-daily
+        minute: "{{ logrotate_schedule_time.split(':')[1] }}"
+        hour: "{{ logrotate_schedule_time.split(':')[0] }}"
+        user: root
+        job: /usr/sbin/logrotate /etc/logrotate.conf
+        state: present
+        cron_file: logrotate-daily
+
+    - name: Disable systemd logrotate timer
+      ansible.builtin.systemd:
+        name: logrotate.timer
+        state: stopped
+        enabled: false

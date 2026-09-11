@@ -51,6 +51,12 @@ Note:
 # List of packages
 logrotate_packages:
   - logrotate
+
+# Scheduler to use (systemd or cron)
+logrotate_scheduler: systemd
+
+# Scheduler timer (defaults to midnight)
+logrotate_schedule_time: "00:00:00"
 </pre></code>
 
 
