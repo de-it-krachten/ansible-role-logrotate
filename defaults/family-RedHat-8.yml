@@ -1,0 +1,4 @@
+---
+
+# Scheduler to use (systemd or cron)
+logrotate_scheduler: cron

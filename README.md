@@ -58,6 +58,12 @@ logrotate_scheduler: systemd
 logrotate_schedule_time: "00:00:00"
 </pre></code>
 
+### defaults/family-RedHat-8.yml
+<pre><code>
+# Scheduler to use (systemd or cron)
+logrotate_scheduler: cron
+</pre></code>
+
 
 
 
