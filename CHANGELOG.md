@@ -1,3 +1,16 @@
+# [1.7.0](https://github.com/de-it-krachten/ansible-role-logrotate/compare/v1.6.0...v1.7.0) (2026-10-11)
+
+
+### Bug Fixes
+
+* Use cron for scheduling on RHEL 8 ([a1bdb84](https://github.com/de-it-krachten/ansible-role-logrotate/commit/a1bdb84d8fa8a7db0ee104858b0fb3e7878fa0bf))
+
+
+### Features
+
+* Drop support for Debian 11 (Bullseye) ([b563f4c](https://github.com/de-it-krachten/ansible-role-logrotate/commit/b563f4c1346af8b2c2e9fe62bd8073af15fc3802))
+* Make logrotate run [@midnight](https://github.com/midnight) (default) ([f99a46d](https://github.com/de-it-krachten/ansible-role-logrotate/commit/f99a46d09b4c561ac5958eeabbc6d540bce61e89))
+
 # [1.6.0](https://github.com/de-it-krachten/ansible-role-logrotate/compare/v1.5.0...v1.6.0) (2026-07-25)
 
 
