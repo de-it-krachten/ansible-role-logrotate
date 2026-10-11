@@ -1,0 +1,6 @@
+---
+
+- name: Install packages
+  ansible.builtin.package:
+    name: "{{ logrotate_packages }}"
+    state: present

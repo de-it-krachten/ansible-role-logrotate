@@ -31,7 +31,6 @@ Supported platforms
 - AlmaLinux 8
 - AlmaLinux 9
 - AlmaLinux 10
-- Debian 11 (Bullseye)
 - Debian 12 (Bookworm)
 - Debian 13 (Trixie)
 - Ubuntu 20.04 LTS
@@ -51,6 +50,18 @@ Note:
 # List of packages
 logrotate_packages:
   - logrotate
+
+# Scheduler to use (systemd or cron)
+logrotate_scheduler: systemd
+
+# Scheduler timer (defaults to midnight)
+logrotate_schedule_time: "00:00:00"
+</pre></code>
+
+### defaults/family-RedHat-8.yml
+<pre><code>
+# Scheduler to use (systemd or cron)
+logrotate_scheduler: cron
 </pre></code>
 
 
